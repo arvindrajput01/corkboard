@@ -1,0 +1,23 @@
+#header-search{
+    height: 5ch;
+}
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.headerSearchButton {
+  position: absolute;
+  width: fit-content;
+  height: 75%;
+  top: 9px;
+  text-align: center;
+  line-height: 2em;
+  background-color: rgb(25,121,169);
+  color: white;
+}

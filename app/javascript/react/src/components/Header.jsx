@@ -4,6 +4,7 @@ import { Navbar,NavDropdown,Form,FormControl,Button,Dropdown } from 'react-boots
 
 import styled from 'styled-components'
 import { bubble as Menu } from 'react-burger-menu'; //we can use slide instead of bubble
+import HeaderSearch from './HeaderSearch'
 import '../stylesheet/Sidebar.css';
 
 const Wrapper = styled.nav`
@@ -29,6 +30,27 @@ const Container = styled.div`
   margin-right: auto;
   max-width: 100%;
 `
+const Nav = styled.nav`
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+`
+const Left = styled.div`
+  flex-basis: auto;
+  align-self: flex-start !important;
+
+`
+
+const Right = styled.div`
+
+  margin-right: 24px;
+  align-self: flex-end !important;
+  width:20%;
+  height:50px;
+
+`
 
 function Header() {
 
@@ -37,9 +59,11 @@ function Header() {
   return (
     <Wrapper>
     <Container>
+     <Nav>
+     <Left>
     <Menu>
       <a className="menu-item" href="/">
-        Home
+        Dashboard
       </a>
       <a className="menu-item" href="/salads">
         Salads
@@ -51,7 +75,13 @@ function Header() {
         Desserts
       </a>
     </Menu>
+    </Left>
+        <Right>
+    <HeaderSearch/>
+    </Right>
+     </Nav >
     </Container>
+
     </Wrapper>
     
 
